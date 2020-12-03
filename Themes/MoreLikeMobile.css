@@ -1,0 +1,153 @@
+/* Home Icon */
+.homeIcon-tEMBK1 {
+    background: url("https://imgur.com/utXEghn.png") center/contain no-repeat;
+    min-width: 30px;
+    min-height: 30px;
+}
+.homeIcon-tEMBK1 path {
+    fill: transparent;
+}
+
+/* Channels List */
+.sidebar-2K8pFh {
+    margin-right: 10px;
+    border-top-right-radius: 7px!important;
+}
+
+/* Members List */
+.members-1998pB .content-3YMskv {background-color: var(--background-primary) !important}
+.membersWrap-2h-GB4, .members-1998pB {
+    left: 15px;
+    margin-left: -5px;
+    padding-top: 0px;
+    margin-right: 25px;
+    width: 250px;
+  }
+/* Chat Fix */
+.chat-3bRxxu {
+    background: var(--background-tertiary);
+}
+.chatContent-a9vAAp {
+    background-color: var(--background-primary);
+}
+.content-yTz4x3::before {
+    display: none;
+}
+
+/* Title Bar Fix */
+.title-3qD0b- {background-color: transparent !important;}
+.children-19S4PO::after {display: none;}
+
+.children-19S4PO {
+    background-color: var(--background-secondary);
+    padding: 10px 10px 14px 0px;
+    margin-left: -10px;
+    border-top-left-radius: 7px !important;
+}
+.toolbar-1t6TWx {
+    background-color: var(--background-secondary);
+    padding: 10px 10px 14px 0px;
+    margin-right: 2px !important;
+    box-shadow: transparent !important;
+    border-top-right-radius: 7px;
+}
+.content-yTz4x3::before {
+    margin-left: 50px !important;
+}
+
+/* Server Message Search */
+/*.search-36MZv- {
+    position: relative;
+    top: 50px !important;
+    margin-left: -120px;
+}
+.searchBar-3dMhjb {
+    width: 240px;
+    margin-right: -93px !important;
+}
+.container-3ayLPN {
+    position: absolute !important;
+    width: 249px !important;
+    left: 88px;
+}
+*/
+
+/* Text Input Box Stuff */
+.scrollableContainer-2NUZem {
+    border-radius: 25px;
+    background: var(--background-secondary-alt);
+    margin-left: 45px;
+    overflow: unset;
+}
+.form-2fGMdU {
+    display: flex;
+    flex-flow: column-reverse;
+    padding-top: 20px;
+    margin-bottom: -10px
+}
+.typing-2GQL18 {
+    position: relative;
+    align-items: center;
+    margin: 0px 0px 0px -33px;
+    bottom: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: var(--background-secondary);
+    transition: all .2s ease-in;
+}
+.attachWrapper-2TRKBi, .attachButton-2WznTc, .uploadInput-1XtQef {
+    position: absolute !important;
+    background: var(--background-secondary-alt);
+    left: -18px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 25px;
+}
+.attachWrapper-2TRKBi {background: var(--background-primary) !important;}
+
+/* Emoji Popout */
+
+.emojiButtonNormal-TdumYh, .emojiButtonHovered-1rWNal {left: -10px;}
+.categoryList-2Kzf65 {
+    background: var(--background-secondary);
+    box-shadow: var(--elevation-low);
+}
+
+/* Jump To Present */
+.jumpToPresentBar-G1R9s6 {
+    position: absolute;
+    width: 48px;
+    bottom: 20px;
+    left: unset;
+    right: 30px;
+    height: 40px;
+    border-radius: 25px;
+    background: var(--background-tertiary);
+    opacity: 1;
+}
+.barButtonMain-3K-jeJ {display: none;}
+.barButtonAlt-mYL1lj {
+    font-size: 0;
+}
+.barButtonIcon-3t4V3d {
+    width: 40px;
+    height: 40px;
+    right: 16px;
+}
+
+/* New Messages Separator */
+#---new-messages-bar {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#---new-messages-bar .unreadPill-2HyYtt {
+    position: relative;
+    top: -1px;
+    background-color: var(--background-primary);
+    color: #f04747;
+}
+.unreadPillCap-3_K2q2 {display: none;}
+
+
+/* Plugins */
+
+/*SendButton*/
