@@ -1,0 +1,36 @@
+.theme-dark {
+    --background-primary: black;
+    --background-tertiary: #212226;
+    --background-secondary-alt-two: #18191d;
+}
+
+/* |||| Main |||| */
+
+/*Chat/Members*/
+
+
+/*TitleBar*/
+.title-3qD0b- {max-width:1610px;background: var(--background-secondary-alt-two) !important;}
+.content-yTz4x3::before {display:none;}
+
+/*MembersList*/
+.members-1998pB {
+    width: 300px;
+    margin-top: 0px !important;
+    background-color: var(--background-primary) !important;
+}
+.member-3-YXUe.container-2Pjhx-.clickable-1JJAn8 {
+    max-width: 300px !important;
+}
+.members-1998pB, .members-1998pB>div {
+    background-color: unset;
+}
+.scroller-2LSbBU {color: var(--background-primary)}
+
+/*ChannelsList*/
+#channels {background:var(--background-secondary-alt-two);}
+.container-1taM1r {background: var(--background-secondary-alt-two)}
+
+/* |||| MobileCord Stuff |||| */
+
+/*nill*/
