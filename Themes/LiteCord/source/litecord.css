@@ -1,0 +1,418 @@
+/*  ------------------------------------  Categories  ------------------------------------ */
+/*  1. Main Stuff 
+            Members List
+            Server List
+            Channels List
+            Profile Stuff
+            Status Picker
+            Chat Area
+            Text Box
+            Unnecessary Stuff
+            Main Stuff Colours
+    2. Settings
+            Floating Settings
+            Settings Colours
+
+
+
+/*  ------------  LiteCord Vars  ------------ */
+
+:root {
+    --radius: 25px;  /* For border-radius/rounded corners on stuff */
+    --radius-alt: 15px;  /* same as --radius but for less rounded stuff like buttons or search boxes etc */
+    --spacing: 10px;  /* Mainly for the padding around the chat area and channels/server list etc */
+    --spacing-alt: 5px; /* Same as --spacing but for less spaced out stuff */
+
+    --settings-width: 900px; /* Anything lower than 900px will look a little weird on some tabs */
+    --settings-height: 100%; /* Best to leave this alone, unless you really want to change this */
+
+    --chat-background: var(--background-primary);
+    --channels-background: var(--background-floating);
+    --guilds-background: var(--background-secondary-alt);
+
+    --settings-background-sidebar: var(--background-secondary);
+    --settings-background-content: var(--background-primary);
+
+    --textbox-size: calc(100% - 0px); /* Width for the box at the bottom for sending messages */
+
+    --hover-animation-speed: 0.35s;
+    --seperator-color: var(--background-accent);
+}
+
+/*  ------------  Main Area  ------------ */
+
+/*  Members List  */
+.membersWrap-2h-GB4 {
+  min-width: unset;
+  width: 50px;
+  justify-content: right;
+}
+.members-1998pB {
+  transition: transform var(--hover-animation-speed);
+}
+.membersWrap-2h-GB4:hover .members-1998pB {
+  transform: translateX(-190px);
+}
+.membersWrap-2h-GB4 .membersGroup-v9BXpm::after {
+  content: '';
+  width: 30px;
+  height: 2px;
+  border-radius: 50px;
+  background: unset;
+  background-color: var(--seperator-color);
+  position: absolute;
+  left: -36px;
+  top: 29px;
+  margin-left: 0px;
+}
+.membersWrap-2h-GB4 .members-1998pB .member-3-YXUe {
+  background-color: unset;
+  margin-left: 0px;
+  transition: margin-left var(--hover-animation-speed);
+}
+.membersWrap-2h-GB4:hover .members-1998pB .member-3-YXUe {
+  margin-left: 8px;
+}
+.membersWrap-2h-GB4:hover .membersGroup-v9BXpm {
+  transform: translateX(-6px);
+}
+.membersWrap-2h-GB4 .membersGroup-v9BXpm {
+  cursor: default;
+  transform: translateX(45px);
+  transition: transform var(--hover-animation-speed);
+  overflow: visible;
+}
+
+/*  Server List  */
+.tree-3tCaw8 .scroller-2TZvBN {
+    margin-top: var(--spacing);
+    margin-bottom: calc( var(--spacing) + 50px);
+    margin-left: var(--spacing);
+    background: var(--background-secondary-alt);
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+}
+.wrapper-1Rf91z {
+    width: 140px;
+}
+
+/*  Channels List  */
+.sidebar-2K8pFh {
+    margin: var(--spacing);
+    border-top-right-radius: var(--radius) !important;
+    border-bottom-right-radius: var(--radius) !important;
+    border-top-left-radius: unset !important;
+    border-bottom-left-radius: unset !important;
+    margin-right: calc( var(--spacing) - var(--spacing)/2 )
+}
+
+/*  Profile Stuff  */
+.avatarWrapper-2yR4wp {
+    position: fixed;
+    left: 15px;
+    margin: var(--spacing);
+    bottom: 15px;
+}
+.avatarWrapper-2yR4wp::before {
+    content: '';
+    position: absolute;
+    width: 72px;
+    height: 70px;
+    bottom: -15px;
+    left: -15px;
+    background: var(--background-secondary-alt);
+    border-bottom-left-radius: var(--radius)
+}
+.avatarWrapper-2yR4wp .avatar-SmRMf2 {
+    width: 45px !important;
+    height: 45px!important;
+}
+
+/*  Status Picker  */
+#status-picker {
+    position: fixed;
+    z-index: -10;
+    background: var(--background-secondary-alt);
+    box-shadow: none;
+    width: 240px;
+    left: 57px;
+    bottom: -21px;
+}
+.menu-3sdvDG {
+    border-radius: 0px !important;
+}
+#status-picker .scroller-3BxosC {
+    margin: 10px 10px 62px 10px;
+    background: var(--background-secondary);
+    border-radius: var(--radius);
+}
+/*Remove Sub/Headers*/
+.statusItem-33LqPf .status-1fhblQ {
+    display: none;
+}
+.statusItem-33LqPf .description-2L932D {
+    display: none;
+}
+
+/*Remove Seperator*/
+#status-picker .separator-2I32lJ {
+    display: none;
+}
+
+/*Horizontal Status*/
+.animatorTop-2Y7x2r.didRender-33z1u8 > .menu-3sdvDG.styleFixed-sX-yHV > .scroller-3BxosC.thin-1ybCId.scrollerBase-289Jih {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto auto auto auto;
+    visibility: visible;
+}
+
+/*Center & Resize Statuses*/
+.customEmoji-2_2FwB {
+    position: relative;
+    top: 4px;
+    left: 4px;
+    width: 25px;
+    height: 25px;
+}
+.statusItem-33LqPf[aria-label="Set a custom status"] .status-1fhblQ {
+    position: relative;
+    top: 4px;
+    left: 6px;
+}
+#status-picker-online .statusItem-33LqPf,
+#status-picker-idle .statusItem-33LqPf,
+#status-picker-dnd .statusItem-33LqPf,
+#status-picker-invisible .statusItem-33LqPf {
+    display: flex;
+    align-content: center;
+}
+.mask-1qbNWk.icon-1IxfJ2 {
+    height: 18px;
+    width: 18px;
+    margin: auto;
+}
+
+/*Display User Stuff over Status Menu*/
+.pointerEvents-2zdfdO {pointer-events: none;}
+
+/*Custom Status Fix*/
+#status-picker-custom-status .statusItem-33LqPf {
+    position: fixed;
+    z-index: 1002;
+    left: 67px;
+    top: -32px;
+    width: 220px;
+    height: 42px;
+    justify-content: center;
+    background: var(--background-secondary);
+    border-radius: var(--radius);
+}
+#status-picker-custom-status .status-1fhblQ .customEmoji-2_2FwB {
+    position: relative;
+    width: 40px !important;
+    height: 40px !important;
+}
+#status-picker-custom-status .statusItem-33LqPf .status-1fhblQ {
+    display: inherit;
+}
+#status-picker-custom-status .statusItem-33LqPf .description-2L932D {
+    display: inherit;
+}
+.customStatusItem-1TTIxM .customText-tY5LJn, .clearStatusIcon-3-MDNF {
+    position: relative;;
+    bottom: -5px !important;
+}
+
+/*Status SVG Change*/
+#status-picker-idle .statusItem-33LqPf .icon-1IxfJ2 [mask="url(#svg-mask-status-idle)"] {
+    mask: url(#svg-mask-status-online);
+}
+#status-picker-dnd .statusItem-33LqPf .icon-1IxfJ2 [mask="url(#svg-mask-status-dnd)"] {
+    mask: url(#svg-mask-status-online);
+}
+#status-picker-invisible .statusItem-33LqPf .icon-1IxfJ2 [mask="url(#svg-mask-status-offline)"] {
+    mask: url(#svg-mask-status-online);
+}
+
+/*Status Hover Change*/
+#status-picker .colorDefault-2K3EoJ.focused-3afm-j {
+    background-color: unset;
+}
+#status-picker-online.colorDefault-2K3EoJ.focused-3afm-j {
+    color: rgb(67, 181, 129);
+    opacity: .75;
+}
+#status-picker-idle.colorDefault-2K3EoJ.focused-3afm-j {
+    color: rgb(250, 166, 26);
+    opacity: .75;
+}
+#status-picker-dnd.colorDefault-2K3EoJ.focused-3afm-j {
+    color: rgb(240, 71, 71);
+    opacity: .75;
+}
+#status-picker-invisible.colorDefault-2K3EoJ.focused-3afm-j {
+    color: rgb(116, 127, 141);
+    opacity: .75;
+}
+
+/*  Chat Area  */
+.chat-3bRxxu {
+    margin: var(--spacing);
+    margin-left: calc( var(--spacing) - var(--spacing)/2 );
+    border-radius: var(--radius)
+}
+
+.content-yTz4x3:before {
+    display: none;
+}
+.theme-dark .children-19S4PO:after {
+    display: none;
+}
+.container-1r6BKw.themed-ANHk51 {
+    background: var(--background-secondary) !important;
+}
+.searchBar-3dMhjb {background: none;}
+.search-2oPWTC .searchBar-3dMhjb {width: 28px;transition-duration: .5s;}
+.search-2oPWTC .searchBar-3dMhjb:hover {width: 144px;}
+.search-2oPWTC.focused-31_ccS .searchBar-3dMhjb {width: 220px !important;}
+.search-2oPWTC .icon-38sknP {cursor: pointer;}
+.searchFilter-2ESiM3, .searchAnswer-3Dz2-q {border-radius: var(--border-radius-main);margin-left: 2px;}
+.search-36MZv- .open-6_Y_aH > .searchBar-3dMhjb {width: 220px;}
+.searchBar-3dMhjb .icon-3cZ1F_ {
+    color: var(--interactive-normal) !important;
+    width: 18px;
+    height: 18px;
+}
+
+
+/*  Text Box  */
+.form-2fGMdU, .channelTextArea-rNsIhG {
+    background: none;
+}
+.form-2fGMdU .wrapper-39oAo3 {
+    border-radius: var(--radius);
+}
+.form-2fGMdU .wrapper-39oAo3 .buttonContainer-3AU1Ij .button-1YxJv4 {
+    border-radius: var(--radius) !important;
+}
+.messagesWrapper-1sRNjr {
+    position: relative;
+}
+.channelTextArea-rNsIhG {
+    margin-bottom: 30px;
+    bottom: -8px;
+}
+.scrollableContainer-2NUZem {
+    position: relative;
+    border-radius: var(--radius);
+    max-width: var(--textbox-size);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+/*  Unnecessary Stuff  */
+
+.iconWrapper-2OrFZ1[aria-label="Help"] {
+    display: none;
+}
+.iconWrapper-2OrFZ1[aria-label="Member List"] {
+    display: none;
+}
+
+/*  Main Stuff Colours  */
+.chatContent-a9vAAp {
+    background: var(--chat-background);
+}
+#channels {
+    background: var(--channels-background) !important;
+}
+.scroller-2TZvBN {
+    background: var(--guilds-background) !important;
+}
+
+
+/*  ------------  Settings  ------------  */
+
+/*  Floating Settings  */
+.layer-3QrUeG[aria-label="RTC_DEBUG"],
+.layer-3QrUeG[aria-label*="SETTINGS"] {
+    width: var(--settings-width);
+    height: var(--settings-height);
+    display: block;
+    margin: auto auto;
+    border-radius: 25px;
+    margin-bottom: 120px;
+    top: 60px;
+    position: relative;
+}
+.container-2lgZY8 {
+    background: var(--background-tertiary) !important;
+}
+.layers-3iHuyZ .layer-3QrUeG:first-of-type[style*="scale(0)"],
+.baseLayer-35bLyl {
+    transform: none !important;
+}
+.layers-3iHuyZ .layer-3QrUeG:first-of-type[aria-hidden="true"] {
+    transform: none !important;
+    opacity: 1 !important;
+    filter: brightness(0.3);
+    pointer-events: none !important;
+    transition: 100ms;
+}
+.standardSidebarView-3F1I7i {
+    top: 0px !important;
+}
+.sidebar-CFHs9e {
+    padding: 30px 6px 30px 20px;
+}
+.contentColumn-2hrIYH {
+    padding: 30px 40px 30px !important;
+}
+.tools-3-3s-N .closeButton-1tv5uR::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    z-index: -1;
+    cursor: default;
+}
+.tools-3-3s-N .closeButton-1tv5uR {
+    transform: none;
+    background: transparent;
+    z-index: -1;
+}
+.contentRegion-3nDuYy .tools-3-3s-N {
+    position: relative;
+}
+.contentRegion-3nDuYy .toolsContainer-1edPuj {
+    position: absolute;
+}
+.contentRegion-3nDuYy .tools-3-3s-N .keybind-KpFkfr {
+    display: none;
+}
+
+/*  Settings Colours  */
+.sidebarRegionScroller-3MXcoP {
+    background: var(--settings-background-sidebar);
+}
+.contentRegionScroller-26nc1e {
+    background: var(--settings-background-content);
+}
+
+
+
+
+
+/*  ------------  Plugin Support  ------------  */
+
+/*  SpotifyControls  */
+.panels-j1Uci_ .container-6sXIoE.withTimeline-824fT_ .barText-lmqc5O {
+    display: none;
+}
+.panels-j1Uci_ .container-6sXIoE.withTimeline-824fT_:hover .barText-lmqc5O {
+    display: flex !important;
+}
