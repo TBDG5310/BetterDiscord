@@ -1,34 +1,58 @@
 /*  ------------------------------------  Categories  ------------------------------------ */
-/*  1. Main Stuff 
+/*  1. Main Stuff
+            Title Bar
             Members List
             Server List
             Channels List
             Profile Stuff
+            Profile Cards
             Status Picker
             Chat Area
             Text Box
+            Jump To Present
             Unnecessary Stuff
             Main Stuff Colours
+            Buttons
     2. Settings
             Floating Settings
             Settings Colours
+            Buttons
 
 
 
 /*  ------------  LiteCord Vars  ------------ */
 
+@import url("https://discordstyles.github.io/RadialStatus/base.css");
+
 :root {
+    --rs-small-spacing: 2px;  /* spacing between avatar and status */
+    --rs-large-spacing: 3px;  /* spacing between avatar and status for user popouts & modals/profiles | MUST end in px */
+    --rs-width: 2px;  /* Width/thickness of status border */
+    --rs-avatar-shape: 50%;  /* 50% for round - 0% for square */
+    --rs-online-color: #43b581;  /* color for online status */
+    --rs-idle-color: #faa61a;  /* color for idle status */
+    --rs-dnd-color: #f04747;  /* color for dnd status */
+    --rs-offline-color: #636b75;  /* color for offline status */
+    --rs-streaming-color: #643da7;  /* color for streaming status */
+    --rs-invisible-color: #747f8d;  /* color for invisible status - Note this will only show for your own invisibility */
+
     --radius: 25px;  /* For border-radius/rounded corners on stuff */
     --radius-alt: 15px;  /* same as --radius but for less rounded stuff like buttons or search boxes etc */
+    --radius-button: 15px; /* This is a border-radius but for buttons only */
     --spacing: 10px;  /* Mainly for the padding around the chat area and channels/server list etc */
     --spacing-alt: 5px; /* Same as --spacing but for less spaced out stuff */
 
-    --settings-width: 900px; /* Anything lower than 900px will look a little weird on some tabs */
+    --settings-width: 1000px; /* Anything lower than 900px will look a little weird on some tabs */
     --settings-height: 100%; /* Best to leave this alone, unless you really want to change this */
 
     --chat-background: var(--background-primary);
     --channels-background: var(--background-floating);
+    --profile-cards-background: var(--background-secondary-alt);
+    --dms-background: var(--background-floating);
     --guilds-background: var(--background-secondary-alt);
+    --title-area-background: var(--background-secondary-alt);
+
+    --jumptopresent-background: var(--bdfdb-blurple);
 
     --settings-background-sidebar: var(--background-secondary);
     --settings-background-content: var(--background-primary);
@@ -37,9 +61,52 @@
 
     --hover-animation-speed: 0.35s;
     --seperator-color: var(--background-accent);
+
 }
 
 /*  ------------  Main Area  ------------ */
+
+
+/* Title Bar */
+
+.winButton-iRh8-Z > svg {
+    display: none;
+ }
+ .winButton-iRh8-Z:hover {
+    background-color: var(--background-teritary);
+ }
+ .winButton-iRh8-Z {
+    pointer-events: none;
+    margin-left: -3px;
+ }
+ 
+ .winButton-iRh8-Z::after {
+    content: "";
+    padding: 7px;
+    border-radius: 50px;
+    pointer-events: fill;
+ }
+ .winButtonClose-1HsbF- {
+    margin-right: 3px;
+ }
+ .winButtonClose-1HsbF-::after {
+    background-color: #FF605C;
+ }
+ .winButtonClose-1HsbF-:hover::after {
+    background-color: rgba(255, 96, 92, 0.8);
+ }
+ .winButtonMinMax-PBQ2gm[aria-label="Maximize"]::after {
+    background-color: #FFBD44;
+ }
+ .winButtonMinMax-PBQ2gm[aria-label="Maximize"]:hover::after {
+    background-color: rgba(255, 189, 68, 0.8);
+ }
+ .winButtonMinMax-PBQ2gm[aria-label="Minimize"]::after {
+    background-color: #00CA4E;
+ }
+ .winButtonMinMax-PBQ2gm[aria-label="Minimize"]:hover::after {
+    background-color: rgba(0, 202, 78, 0.8);
+ }
 
 /*  Members List  */
 .membersWrap-2h-GB4 {
@@ -84,15 +151,15 @@
 }
 
 /*  Server List  */
-.tree-3tCaw8 .scroller-2TZvBN {
+.tree-2wKJdG .scroller-1Bvpku {
     margin-top: var(--spacing);
-    margin-bottom: calc( var(--spacing) + 50px);
+    margin-bottom: calc( var(--spacing) + 70px);
     margin-left: var(--spacing);
     background: var(--background-secondary-alt);
     border-top-left-radius: var(--radius);
-    border-bottom-left-radius: var(--radius);
+    border-bottom-left-radius: none !important;
 }
-.wrapper-1Rf91z {
+.wrapper-3NnKdC {
     width: 140px;
 }
 
@@ -128,6 +195,27 @@
     height: 45px!important;
 }
 
+/* Profile Cards */
+
+.container-3baos1 {
+    position: fixed;
+    bottom: calc(var(--spacing) - 1px);
+    left: var(--spacing) + var(--spacing);
+    width: 224px;
+    border-bottom-right-radius: var(--radius);
+}
+
+.panels-j1Uci_ {
+    max-height: 0px;
+    margin-bottom: 52px;
+    transition: max-height var(--hover-animation-speed) ease-out;
+}
+
+.panels-j1Uci_:hover {
+    max-height: 400px;
+    transition: max-height var(--hover-animation-speed) ease-in;
+}
+
 /*  Status Picker  */
 #status-picker {
     position: fixed;
@@ -136,7 +224,8 @@
     box-shadow: none;
     width: 240px;
     left: 57px;
-    bottom: -21px;
+    bottom: -22px;
+    border-bottom: 1px solid var(--background-modifier-accent)
 }
 .menu-3sdvDG {
     border-radius: 0px !important;
@@ -262,15 +351,27 @@
     margin-left: calc( var(--spacing) - var(--spacing)/2 );
     border-radius: var(--radius)
 }
+.container-1D34oG {
+    margin: var(--spacing);
+    margin-left: calc( var(--spacing) - var(--spacing)/2);
+    border-radius: var(--radius);
+}
+.container-3Mxszk {
+    margin: var(--spacing);
+    margin-left: calc( var(--spacing) - var(--spacing)/2);
+    border-radius: var(--radius);
+}
+.applicationStore-1pNvnv {
+    margin: var(--spacing);
+    margin-left: calc( var(--spacing) - var(--spacing)/2);
+    border-radius: var(--radius);
+}
 
 .content-yTz4x3:before {
     display: none;
 }
 .theme-dark .children-19S4PO:after {
     display: none;
-}
-.container-1r6BKw.themed-ANHk51 {
-    background: var(--background-secondary) !important;
 }
 .searchBar-3dMhjb {background: none;}
 .search-2oPWTC .searchBar-3dMhjb {width: 28px;transition-duration: .5s;}
@@ -284,7 +385,6 @@
     width: 18px;
     height: 18px;
 }
-
 
 /*  Text Box  */
 .form-2fGMdU, .channelTextArea-rNsIhG {
@@ -312,12 +412,51 @@
     justify-items: center;
 }
 
+/* Jump To Present */
+.jumpToPresentBar-G1R9s6 .barButtonMain-3K-jeJ {font-size: 0}
+.jumpToPresentBar-G1R9s6 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    margin-bottom: 12px;
+    left: initial;
+    border-radius: 50%;
+    background: var(--jumptopresent-background);
+    padding: 0;
+}
+.jumpToPresentBar-G1R9s6 .barButtonAlt-mYL1lj {
+    font-size: 0;
+    position: absolute;
+}
+.jumpToPresentBar-G1R9s6 .barButtonAlt-mYL1lj svg {
+    transform: scale(2);
+    margin: 0;
+}
+.barButtonMain-3K-jeJ {padding: 0}
+.jumpToPresentBar-G1R9s6 .spinner-2enMB9 {padding-right: 4px}
+
+/* Unread & Mentions */
+.recentMentionsPopout-3rCiI6 {
+    position: fixed;
+    border: unset !important;
+    box-shadow: unset;
+    right: var(--spacing);
+    bottom: var(--spacing);
+    margin-top: var(--spacing);
+    max-height: calc(92.3% - var(--spacing)) !important;
+}
+
 /*  Unnecessary Stuff  */
 
 .iconWrapper-2OrFZ1[aria-label="Help"] {
     display: none;
 }
 .iconWrapper-2OrFZ1[aria-label="Member List"] {
+    display: none;
+}
+
+[aria-label="Send a gift"] {
     display: none;
 }
 
@@ -328,8 +467,32 @@
 #channels {
     background: var(--channels-background) !important;
 }
+#private-channels {
+    background: var(--dms-background);
+}
+.panels-j1Uci_ .container-3baos1 {
+    background: var(--profile-cards-background);
+}
 .scroller-2TZvBN {
     background: var(--guilds-background) !important;
+}
+.container-1r6BKw.themed-ANHk51 {
+    background: var(--title-area-background) !important;
+}
+.sidebar-2K8pFh .header-2V-4Sw {
+    background: var(--title-area-background)
+}
+.searchHeader-2XoQg7 {
+    background: var(--title-area-background);
+}
+.recentMentionsPopout-3rCiI6 .header-2-Imhb {
+    background: var(--title-area-background);
+}
+
+/* Buttons */
+
+.containerDefault--pIXnN .content-1x5b-n {
+    border-radius: var(--radius-button);
 }
 
 
@@ -403,6 +566,7 @@
     background: var(--settings-background-content);
 }
 
+/*Buttons*/
 
 
 
