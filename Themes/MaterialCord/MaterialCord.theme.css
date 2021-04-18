@@ -1,15 +1,17 @@
 /**
  * @name MaterialCord
- * @author lixm.jb / TBHItzDG
+ * @author TBDG
  * @version 1.2.1
  * @description This is a Material theme for Discord, heavily based on Google's Material Theme. Currently Light theme does not work properly!
  * @authorId 262068640013090819
- * @website https://dgtbhitzdg.github.io/
+ * @website https://tbdg5310.github.io/
 */
 
-@import url("https://dgtbhitzdg.github.io/themes/MaterialCord.theme.css");
-@import url("https://dgtbhitzdg.github.io/themes/MaterialCons.theme.css");
+@import url("https://tbdg5310.github.io/themes/MaterialCord/MaterialCord.theme.css");
+@import url("https://tbdg5310.github.io/addons/MaterialCons/MaterialCons.theme.css");
+@import url("https://tbdg5310.github.io/addons/WindowsTitleBar/WindowsTitleBar.css");
 
-
-
-
+:root {
+    --border-radius-main:   25px;
+    --border-radius-alt: 12.5px;
+}
