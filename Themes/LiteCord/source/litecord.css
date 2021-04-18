@@ -568,7 +568,14 @@
 
 /*Buttons*/
 
+.iconBadge-3qSJIw.participating-1NvRVd {
+    background-color: red !important;
+    display: none !important;
+}
 
+.base-PmTxvP {
+    border-radius: 0px !important;
+}
 
 
 /*  ------------  Plugin Support  ------------  */
