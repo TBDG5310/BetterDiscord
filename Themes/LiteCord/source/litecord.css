@@ -17,9 +17,6 @@
             Floating Settings
             Settings Colours
             Buttons
-
-
-
 /*  ------------  LiteCord Vars  ------------ */
 
 @import url("https://discordstyles.github.io/RadialStatus/base.css");
@@ -149,6 +146,9 @@
   transition: transform var(--hover-animation-speed);
   overflow: visible;
 }
+.bd-member-badge {
+    position: relative;
+}
 
 /*  Server List  */
 .tree-2wKJdG .scroller-1Bvpku {
@@ -160,7 +160,7 @@
     border-bottom-left-radius: none !important;
 }
 .wrapper-3NnKdC {
-    width: 140px;
+    width: 82px;
 }
 
 /*  Channels List  */
@@ -170,7 +170,8 @@
     border-bottom-right-radius: var(--radius) !important;
     border-top-left-radius: unset !important;
     border-bottom-left-radius: unset !important;
-    margin-right: calc( var(--spacing) - var(--spacing)/2 )
+    margin-right: calc( var(--spacing) - var(--spacing)/2 );
+    margin-left: 0px;
 }
 
 /*  Profile Stuff  */
@@ -194,26 +195,24 @@
     width: 45px !important;
     height: 45px!important;
 }
+.avatarWrapper-2yR4wp .avatarSpeaking-2c8-9i {
+    display: none;
+}
 
 /* Profile Cards */
 
 .container-3baos1 {
-    position: fixed;
-    bottom: calc(var(--spacing) - 1px);
-    left: var(--spacing) + var(--spacing);
-    width: 224px;
-    border-bottom-right-radius: var(--radius);
+    background: var(--profile-cards-background) !important;
 }
-
-.panels-j1Uci_ {
-    max-height: 0px;
-    margin-bottom: 52px;
-    transition: max-height var(--hover-animation-speed) ease-out;
+.container-1giJp5 [aria-label="Turn On Camera"],
+.container-1giJp5 [aria-label="Share Your Screen"],
+.container-1giJp5 [aria-label="Noise Suppression powered by Krisp"] {
+    display: none;
 }
-
-.panels-j1Uci_:hover {
-    max-height: 400px;
-    transition: max-height var(--hover-animation-speed) ease-in;
+.panels-j1Uci_:hover [aria-label="Turn On Camera"],
+.panels-j1Uci_:hover [aria-label="Share Your Screen"],
+.panels-j1Uci_:hover [aria-label="Noise Suppression powered by Krisp"] {
+    display: flex;
 }
 
 /*  Status Picker  */
@@ -584,6 +583,6 @@
 .panels-j1Uci_ .container-6sXIoE.withTimeline-824fT_ .barText-lmqc5O {
     display: none;
 }
-.panels-j1Uci_ .container-6sXIoE.withTimeline-824fT_:hover .barText-lmqc5O {
+.panels-j1Uci_:hover .container-6sXIoE.withTimeline-824fT_ .barText-lmqc5O {
     display: flex !important;
 }
