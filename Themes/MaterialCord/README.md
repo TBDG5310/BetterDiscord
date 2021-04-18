@@ -1,3 +1,7 @@
+![Banner](https://raw.githack.com/TBDG5310/BetterDiscord/master/Themes/MaterialCord/assets/themebanner.png)
+
+---
+
 # MaterialCord
 ## What does it do?
 - MaterialCord improves upon the classic Discord UI while staying true to the colors of Vanilla Discord.
