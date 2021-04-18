@@ -1,8 +1,8 @@
 /**
  * @name MaterialCord
  * @author TBDG
- * @version 1.2.1
- * @description This is a Material theme for Discord, heavily based on Google's Material Theme. Currently Light theme does not work properly!
+ * @version 1.2.2
+ * @description This theme aims to deliver what I think Discord and Material Design together could look like, without drastically changing the current looks of Discord. Loosley based on Google's Material Design and others.
  * @authorId 262068640013090819
  * @website https://tbdg5310.github.io/
 */
@@ -12,6 +12,16 @@
 @import url("https://tbdg5310.github.io/addons/WindowsTitleBar/WindowsTitleBar.css");
 
 :root {
-    --border-radius-main:   25px;
+    --border-radius-main: 25px;
     --border-radius-alt: 12.5px;
+
+    --blurple: rgb(114, 137, 218);
+
+    --background-guilds: #292b2f; /* Default is background-secondary-alt #292b2f */
+    --background-channels: #2f3136; /* Default is background-secondary #2f3136 */
+    --background-chat: #36393f; /* Default is background-primary #36393f */
+    --background-members: #2f3136; /* Default is background-secondary #2f3136 */
+
+    --background-settings-sidebar: #292b2f; /* Default is background-secondary-alt #292b2f */
+    --background-settings-content: #36393f; /* Default is background-primary #36393f */
 }
