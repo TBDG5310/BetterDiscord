@@ -25,4 +25,6 @@
 
     --background-settings-sidebar: #292b2f; /* Default is background-secondary-alt #292b2f */
     --background-settings-content: #36393f; /* Default is background-primary #36393f */
+
+    --test: red;
 }
