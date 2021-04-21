@@ -1,4 +1,4 @@
-![Banner](https://raw.githack.com/TBDG5310/BetterDiscord/master/Themes/MaterialCord/assets/themebanner.png)
+![Banner](https://raw.githack.com/TBDG5310/BetterDiscord/master/Themes/MaterialCord/assets/banner.png)
 
 ---
 
